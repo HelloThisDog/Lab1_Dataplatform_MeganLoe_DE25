@@ -24,8 +24,7 @@ if __name__ == "__main__":
         (df["currency"] == ""),
         (df["created_at"] == ""),
         (df["price"] == ""),
-        (df["price"] <= 0),
-        (df["price"] == str)
+        (df["price"] <= 0)
     )
 
     df_reject = df[reject].copy()
