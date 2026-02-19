@@ -6,8 +6,6 @@
 10,SKU-1011,scarf,200.0,SEK,2024-03-01,False,False,False,False,False
 11,SKU-1012,belt,300.0,SEK,2024/03/10,False,False,False,False,False
 12,SKU-1013,cap,75.0,SEK,2024-04-01,False,False,False,False,False
-13,SKU-1014,t-shirt,0.0,SEK,2024-04-10,False,False,False,False,False
-14,SKU-1015,hoodie,-50.0,SEK,2024-04-15,False,False,False,False,False
 15,SKU-1016,coat,2500.0,SEK,2024-05-01,False,False,False,False,False
 16,SKU-1017,jeans,800.0,SEK,2024-05-05,False,False,False,False,False
 17,SKU-1018,sneakers,1200.0,SEK,2024-05-10,False,False,False,False,False
@@ -43,5 +41,4 @@
 48,SKU-1049,robe,900.0,SEK,2024-12-25,False,False,False,False,False
 49,SKU-1050,pyjamas,600.0,SEK,2025-01-01,False,False,False,False,False
 50,SKU-1051,suspenders,250.0,SEK,2025-01-05,False,False,False,False,False
-51,SKU-1052,coat,,SEK,2025-01-10,False,False,False,False,False
 52,SKU-1053,cap,85.0,SEK,2025-01-15,False,False,False,False,False

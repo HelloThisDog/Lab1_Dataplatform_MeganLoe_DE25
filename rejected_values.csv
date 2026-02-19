@@ -3,8 +3,11 @@
 3,,jacket,-200.0,SEK,2024-13-01,True,False,False,False,False
 4,SKU-1005,,,, ,False,True,True,True,False
 5,SKU-1006,designer coat,,SEK,2024-05-01,False,False,True,False,False
-6,,hat,,SEK,,True,False,False,False,True
+6,,hat,,SEK,,True,False,True,False,True
 7,SKU-1008,gloves,120.0,,2024-06-20,False,False,False,True,False
+13,SKU-1014,t-shirt,0.0,SEK,2024-04-10,False,False,False,False,False
+14,SKU-1015,hoodie,-50.0,SEK,2024-04-15,False,False,False,False,False
 42,SKU-1043,cardigan,,SEK,2024-11-15,False,False,True,False,False
+51,SKU-1052,coat,,SEK,2025-01-10,False,False,True,False,False
 53,SKU-1054,,450.0,SEK,2025-02-01,False,True,False,False,False
 54,SKU-1055,scarf,300.0,,2025-02-05,False,False,False,True,False
