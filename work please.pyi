@@ -10,6 +10,8 @@ if __name__ == "__main__":
     df["currency missing"] = df["currency"].isna()
     df["created_at missing"] = df["created_at"].isna()
 
+    df["price"] = pd.to_numeric(df["price"], errors="coerce")
+
     df["name"] = df["name"].astype(str).str.strip()
     df["currency"] = df["currency"].str.strip()
     
@@ -18,16 +20,14 @@ if __name__ == "__main__":
     
     print(df)
 
-    reject = (
-        (df["id"] == ""),
-        (df["name"] == ""),
-        (df["currency"] == ""),
-        (df["created_at"] == ""),
-        (df["price"] == ""),
-        (df["price"] <= 0)
-    )
+    reject_df = (
+        (df["id missing"] == "true"),
+        (df["name missing"] == "true"),
+        (df["currency missing"] == "true"),
+        (df["created_at missing"] == "true"),
+        (df["price missing"] == "true"))
 
-    df_reject = df[reject].copy()
-    df_valid = df[~reject].copy()
+    #bad_df = df[reject_df].copy()
+    #good_df = df[~reject_df].copy()
 
-    df_valid.to_csv("fixed.csv", index=False)
+    #good_df.to_csv("fixed.csv")
