@@ -6,6 +6,7 @@ if __name__ == "__main__":
 
     df["price"] = pd.to_numeric(df["price"], errors="coerce")
 
+
     df["name"] = df["name"].astype(str).str.strip()
     df["currency"] = df["currency"].str.strip()
     
@@ -27,11 +28,13 @@ if __name__ == "__main__":
         (df["price"] <= 0)
     )
 
-    
+
+
     bad_df = df[reject_df].copy()
     good_df = df[~reject_df].copy()
 
     good_df.to_csv("fixed.csv")
 
-    bad_df.to_csv("rejected_values.csv")
+    bad_df.to_csv("rejected_products.csv")
 
+    #analytics_summary.csv
