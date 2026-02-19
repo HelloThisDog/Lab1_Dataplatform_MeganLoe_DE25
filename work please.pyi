@@ -21,13 +21,17 @@ if __name__ == "__main__":
     print(df)
 
     reject_df = (
-        (df["id missing"] == "true"),
-        (df["name missing"] == "true"),
-        (df["currency missing"] == "true"),
-        (df["created_at missing"] == "true"),
-        (df["price missing"] == "true"))
+        (df["id missing"] == True)|
+        (df["name missing"] == True)|
+        (df["currency missing"] == True)|
+        (df["created_at missing"] == True)|
+        (df["price missing"] == True)
+    )
 
-    #bad_df = df[reject_df].copy()
-    #good_df = df[~reject_df].copy()
+    bad_df = df[reject_df].copy()
+    good_df = df[~reject_df].copy()
 
-    #good_df.to_csv("fixed.csv")
+    good_df.to_csv("fixed.csv")
+
+    bad_df.to_csv("rejected_values.csv")
+
