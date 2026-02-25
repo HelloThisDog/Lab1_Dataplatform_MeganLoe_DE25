@@ -42,8 +42,6 @@ if __name__ == "__main__":
 
     money_df = good_df.query("average_price > 0").iloc[0] 
 
-    print(money_df)
-
     money_df.to_csv("analytics_summary.csv")
 
     
