@@ -10,13 +10,6 @@ if __name__ == "__main__":
     df["name"] = df["name"].astype(str).str.strip()
     df["currency"] = df["currency"].str.strip()
 
-    #counts up the avarage and median, as well as valid entries
-    df["median_price"] = df["price"].median() 
-    df["average_price"] = df["price"].mean() 
-    df["amount"] = df["price"].count() #counts the correct amount 50 out of 55 rows
-    
-    df.to_csv("analytics_summary.csv") #putting this here so becuase all values have been asked to be shown
-
     #flags for null values
     df["id missing"] = df["id"].isna()
     df["name missing"] = df["name"].isna()
@@ -33,8 +26,6 @@ if __name__ == "__main__":
         (df["price missing"] == True)|
         (df["price"] <= 0)
     )
-
-
     #creates the csvs, based on the results from the net
     bad_df = df[reject_df].copy()
     good_df = df[~reject_df].copy()
@@ -43,6 +34,17 @@ if __name__ == "__main__":
     good_df.to_csv("fixed.csv") #everything with the correct value
 
     bad_df.to_csv("rejected_products.csv") #everything with the wrong values
+
+    #counts up the avarage and median, as well as valid entries
+    good_df["median_price"] = good_df["price"].median() 
+    good_df["average_price"] = good_df["price"].mean() 
+    good_df["amount"] = good_df["price"].count() #counts the correct amount 43 out of 55 rows
+
+    money_df = good_df.query("average_price > 0").iloc[0] 
+
+    print(money_df)
+
+    money_df.to_csv("analytics_summary.csv")
 
     
 
